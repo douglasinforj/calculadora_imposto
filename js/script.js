@@ -11,4 +11,10 @@ document.getElementById("impostoForm").addEventListener("submit", function(event
     const frente = parseFloat(document.getElementById("frete").value);
     const outrosCustos = parseFloat(document.getElementById("outrosCustos").value);
 
+    //funções para os calculos:
+
+    function calcularIcms(valorProduto, aliquotaIcms){
+        return valorProduto * (aliquotaIcms /100);
+    }
+
 })
