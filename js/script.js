@@ -8,7 +8,7 @@ document.getElementById("impostoForm").addEventListener("submit", function(event
     const aliquotaCofins = parseFloat(document.getElementById("aliquotaCofins").value);
     const aliquotaFcp = parseFloat(document.getElementById("aliquotaFcp").value);
     const mvaPercentual = parseFloat(document.getElementsByTagName("mvaPercentual").value);
-    const frente = parseFloat(document.getElementById("frete").value);
+    const frete = parseFloat(document.getElementById("frete").value);
     const outrosCustos = parseFloat(document.getElementById("outrosCustos").value);
 
     //funções para os calculos:
@@ -30,4 +30,8 @@ document.getElementById("impostoForm").addEventListener("submit", function(event
         return valorProduto * (aliquotaFcp / 100);
     }
 
+    function calcularMva(valorProduto, mvaPercentual, frete, outrosCustos){
+        return valorProduto + frete + outrosCustos + (valorProduto * (mvaPercentual / 100));
+    }
+    
 })
