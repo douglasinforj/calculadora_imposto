@@ -39,5 +39,14 @@ document.getElementById("impostoForm").addEventListener("submit", function(event
         const icmsProprio = calcularIcms(valorProduto, aliquotaIcms);
         return (baseCalculoIcmsSt * (aliquotaIcms / 100)) - icmsProprio; 
     }
+
+    function calcularTotalImposto(valorProduto, aliquotaIcms, aliquotaIpi, aliquotaPis, aliquotaCofins, aliquotaFcp, mvaPercentual, frete, outrosCustos){
+        const icms = calcularIcms(valorProduto, aliquotaIcms);
+        const ipi = calcularIpi(valorProduto,aliquotaIpi);
+        const pisConfins = calcularPisCofins(valorProduto, aliquotaPis, aliquotaCofins);
+        const fcp = calcularFcp(valorProduto, aliquotaFcp);
+        const icmsSt = calcularIcmsSt(valorProduto, aliquotaIcms, mvaPercentual, frete, outrosCustos);
+        return icms + ipi + pisConfins + fcp + icmsSt
+    }
     
 })
