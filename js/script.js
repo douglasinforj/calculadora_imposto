@@ -33,5 +33,11 @@ document.getElementById("impostoForm").addEventListener("submit", function(event
     function calcularMva(valorProduto, mvaPercentual, frete, outrosCustos){
         return valorProduto + frete + outrosCustos + (valorProduto * (mvaPercentual / 100));
     }
+
+    function calcularIcmsSt(valorProduto, aliquotaIcms, mvaPercentual, frete, outrosCustos){
+        const baseCalculoIcmsSt = calcularMva(valorProduto, mvaPercentual, frete, outrosCustos);
+        const icmsProprio = calcularIcms(valorProduto, aliquotaIcms);
+        return (baseCalculoIcmsSt * (aliquotaIcms / 100)) - icmsProprio; 
+    }
     
 })
