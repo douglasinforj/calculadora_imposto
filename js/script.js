@@ -14,11 +14,16 @@ document.getElementById("impostoForm").addEventListener("submit", function(event
     //funções para os calculos:
 
     function calcularIcms(valorProduto, aliquotaIcms){
-        return valorProduto * (aliquotaIcms /100);
+        return valorProduto * (aliquotaIcms / 100);
     }
 
     function calcularIpi(valorProduto, aliquotaIpi){
-        return valorProduto * (aliquotaIpi /100)
+        return valorProduto * (aliquotaIpi / 100)
+    }
+
+    function calcularPisCofins(valorProduto, aliquotaPis, aliquotaCofins){
+        const pis = valorProduto * (aliquotaPis / 100);
+        const Cofins = valorProduto * (aliquotaCofins / 100)
     }
 
 })
