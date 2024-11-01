@@ -6,6 +6,55 @@
     <title>Calculadora Imposto</title>
 </head>
 <body>
-    
+
+    <div class="container">
+        <h1>Calculadora de Imposto</h1>
+        <form id="importoForm">
+            <div class="form-group">
+                <label for="valorProduto">Valor do Produto (R$):</label>
+                <input type="number" id="valorProduto" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="aliquotaIcms">Alíquota de ICMS (%):</label>
+                <input type="number" id="aliquotaIcms" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="aliquotaIpi">Alíquota IPI (%):</label>
+                <input type="number" id="aliquotaIpi" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="aliquotaPis">Alíquota PIS (%):</label>
+                <input type="number" id="aliquotaPis" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="aliquotaCofins">Alíquota Cofins (%):</label>
+                <input type="number" id="aliquotaCofins" step="0.01" required >
+            </div>
+            <div class="form-group">
+                <label for="aliquotaFcp"> Alíquota FCP (%):</label>
+                <input type="number" id="aliquotaFcp" step="0.01" required >
+            </div>
+            <div class="form-group">
+                <label for="mvaPercentual">MVA (%):</label>
+                <input type="number" id="mvaPercentual" step="0.01" required >
+            </div>
+            <div class="form-group" >
+                <label for="frete">Frete (R$):</label>
+                <input type="number" id="frete" step="0.01" value="0">
+            </div>
+            <div class="form-group" >
+                <label for="outrosCustos">Outros Custos (R$):</label>
+                <input type="number" id="outrosCustos" step="0.01" value="0" >
+            </div>
+
+            <button type="submit">Calcular imposto</button>
+        </form>
+
+        <div id="resultado">
+            <h2>Resultado:</h2>
+            <p id="totalImposto">Total de Imposto: R$ 0,00</p>
+        </div>
+
+    </div>
 </body>
 </html>
