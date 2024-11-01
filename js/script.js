@@ -48,5 +48,8 @@ document.getElementById("impostoForm").addEventListener("submit", function(event
         const icmsSt = calcularIcmsSt(valorProduto, aliquotaIcms, mvaPercentual, frete, outrosCustos);
         return icms + ipi + pisConfins + fcp + icmsSt
     }
+
+    const totalImpostos = calcularTotalImposto(valorProduto, aliquotaIcms, aliquotaIpi, aliquotaPis, aliquotaCofins, aliquotaFcp, mvaPercentual, frete, outrosCustos);
     
+    document.getElementById("totalImposto").innerHTML = `Total de imposto: R$ ${totalImpostos.toFixed(2)}`;
 })
