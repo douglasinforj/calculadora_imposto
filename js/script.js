@@ -17,4 +17,8 @@ document.getElementById("impostoForm").addEventListener("submit", function(event
         return valorProduto * (aliquotaIcms /100);
     }
 
+    function calcularIpi(valorProduto, aliquotaIpi){
+        return valorProduto * (aliquotaIpi /100)
+    }
+
 })
